@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/change_page"
+    android:background="@color/backgroundBlue"
+    tools:context="com.example.david.appointmentapplication.ChangeActivity">
+
+    <TextView
+        android:layout_width="180dp"
+        android:layout_height="90dp"
+        android:id="@+id/add_image"
+        android:text="NHS logo"
+        android:textSize="36sp"
+        android:gravity="center"
+        android:textColor="@color/textWhite"
+        tools:layout_editor_absoluteY="128dp"
+        tools:layout_editor_absoluteX="102dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/splash_text"
+        android:text="Change page"
+        android:gravity="center"
+        android:textSize="24sp"
+        android:textColor="@color/textWhite"
+        tools:layout_editor_absoluteY="337dp"
+        tools:layout_editor_absoluteX="0dp"
+        android:layout_below="@+id/add_image"
+        android:layout_centerHorizontal="true" />
+
+    <ImageButton
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/homebutton"
+        android:text="@string/home_button"
+        android:id="@+id/home_button"/>
+
+    <ImageButton
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/profile"
+        android:id="@+id/profile_button"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>

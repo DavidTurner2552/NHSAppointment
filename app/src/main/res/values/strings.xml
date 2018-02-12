@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">AppointmentApplication</string>
+    <string name="book_button">Book Appointment</string>
+    <string name="cancel_button">Cancel Appointment</string>
+    <string name="change_button">Change Appointment</string>
+    <string name="local_button">Local Surgeries</string>
+    <string name="diag_button">Self Diagnose</string>
+    <string name="help_button">Help</string>
+    <string name="home_button">Home</string>
+    <string name="profile_button">Profile</string>
+    <string name="title_activity_book">BookActivity</string>
+</resources>

@@ -29,9 +29,12 @@ public class dataBaseConnection {
             Connection con = DriverManager.getConnection(host, uName, uPass);
 
             Statement stmt = con.createStatement() ;
-            String query = "SELECT name FROM Doctors Where doctorID = 2;" ;
+            String query = "SELECT name FROM Doctors;" ;
             ResultSet rs = stmt.executeQuery(query) ;
-            System.out.println(rs.getString(1));
+            while (rs.next())
+            {
+                System.out.println(rs.getString(1));
+            }
         }
         catch (SQLException err){
             System.out.println(err.getMessage());

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:id="@+id/activity_splash"
     android:background="@color/backgroundBlue"
-    tools:context="com.example.david.appointmentapplication.SplashActivity">
+    tools:context="com.example.david.nhsappointment.SplashActivity">
 
     <TextView
         android:layout_width="180dp"

@@ -3,6 +3,7 @@ package com.example.david.nhsappointment;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Properties;
@@ -12,26 +13,27 @@ import java.util.Properties;
  */
 
 public class dataBaseConnection {
-
     public static void main(String[] args){
         try {
-//            Properties info = new Properties();
-//            info.setProperty("java.net.useSystemProxies", "true");
-//            info.put("http.proxyHost", "wwwproxy.hud.ac.uk");
-//            info.put("http.proxyPort", "3128");
-//            //info.put("proxy_user", "[proxy user]");
-//            //info.put("proxy_password", "[proxy password]");
-//            info.put("user", "root");
-//            info.put("password", "team1uni");
+            String password = "1";
             String host = "jdbc:mysql://team1uni.ckqzrcwbv3dj.eu-west-1.rds.amazonaws.com:8080/team1uni";
             String uName = "root";
             String uPass = "team1uni";
             Connection con = DriverManager.getConnection(host, uName, uPass);
 
             Statement stmt = con.createStatement() ;
-            String query = "SELECT name FROM Doctors Where doctorID = 2;" ;
+            String query = "SELECT name FROM Customer WHERE customerID = "+password+";" ;
             ResultSet rs = stmt.executeQuery(query) ;
-            System.out.println(rs.getString(1));
+            ResultSetMetaData rsmd = rs.getMetaData();
+            int columnsNumber = rsmd.getColumnCount();
+            while (rs.next()) {
+                for (int i = 1; i <= columnsNumber; i++) {
+                    if (i > 1) System.out.print(",  ");
+                    String columnValue = rs.getString(i);
+                    System.out.print(columnValue);
+                }
+                System.out.println("");
+            }
         }
         catch (SQLException err){
             System.out.println(err.getMessage());

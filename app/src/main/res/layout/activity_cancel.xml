@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:id="@+id/cancel_page"
     android:background="@color/backgroundBlue"
-    tools:context="com.example.david.appointmentapplication.CancelActivity">
+    tools:context="com.example.david.nhsappointment.CancelActivity">
 
     <TextView
         android:layout_width="180dp"

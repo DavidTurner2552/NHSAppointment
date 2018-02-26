@@ -39,31 +39,7 @@ public class LoginActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
 
-                        try {
-                            String host = "jdbc:mysql://team1uni.ckqzrcwbv3dj.eu-west-1.rds.amazonaws.com:8080/team1uni";
-                            String uName = "root";
-                            String uPass = "team1uni";
-                            Connection con = DriverManager.getConnection(host, uName, uPass);
-
-                            Statement stmt = con.createStatement() ;
-                            String query = "SELECT name FROM Customer WHERE customerID = "+password + ";" ;
-                            ResultSet rs = stmt.executeQuery(query) ;
-                            ResultSetMetaData rsmd = rs.getMetaData();
-                            int columnsNumber = rsmd.getColumnCount();
-                            while (rs.next()) {
-                                for (int i = 1; i <= columnsNumber; i++) {
-                                    if (i > 1); //System.out.print(",  ");
-                                    String columnValue = rs.getString(i);
-                                    nameRes = columnValue;
-                                    System.out.print(columnValue);
-                                }
-                                //System.out.println("");
-
-                            }
-                        }
-                        catch (SQLException err){
-                            System.out.println(err.getMessage());
-                        }
+                        dataBaseConnection.loginQuery(1);
 
 //                        if (username.getText().toString().equals(nameRes) //&&
 //                        //password.getText().toString().equals("1")

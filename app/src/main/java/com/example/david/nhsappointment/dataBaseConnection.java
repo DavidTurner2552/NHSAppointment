@@ -12,31 +12,40 @@ import java.util.Properties;
  * Created by David on 05/02/2018.
  */
 
-public class dataBaseConnection {
-    public static void main(String[] args){
-        try {
-            String password = "1";
-            String host = "jdbc:mysql://team1uni.ckqzrcwbv3dj.eu-west-1.rds.amazonaws.com:8080/team1uni";
-            String uName = "root";
-            String uPass = "team1uni";
-            Connection con = DriverManager.getConnection(host, uName, uPass);
+    public abstract class dataBaseConnection {
 
-            Statement stmt = con.createStatement() ;
-            String query = "SELECT name FROM Customer WHERE customerID = "+password+";" ;
-            ResultSet rs = stmt.executeQuery(query) ;
-            ResultSetMetaData rsmd = rs.getMetaData();
-            int columnsNumber = rsmd.getColumnCount();
-            while (rs.next()) {
-                for (int i = 1; i <= columnsNumber; i++) {
-                    if (i > 1) System.out.print(",  ");
-                    String columnValue = rs.getString(i);
-                    System.out.print(columnValue);
-                }
-                System.out.println("");
-            }
+        public static void main(String[] args){
+            System.out.println(com.example.david.nhsappointment.dataBaseConnection.loginQuery(1));
         }
-        catch (SQLException err){
-            System.out.println(err.getMessage());
+
+        public static String loginQuery(int password)
+        {
+            try {
+                String host = "jdbc:mysql://team1uni.ckqzrcwbv3dj.eu-west-1.rds.amazonaws.com:8080/team1uni";
+                String uName = "root";
+                String uPass = "team1uni";
+                Connection con = DriverManager.getConnection(host, uName, uPass);
+
+                Statement stmt = con.createStatement() ;
+                String query = "SELECT name FROM Customer WHERE customerID = "+password+";" ;
+                ResultSet rs = stmt.executeQuery(query) ;
+                ResultSetMetaData rsmd = rs.getMetaData();
+                int columnsNumber = rsmd.getColumnCount();
+                while (rs.next()) {
+                    for (int i = 1; i <= columnsNumber; i++) {
+                        if (i > 1) System.out.print(",  ");
+                        String columnValue = rs.getString(i);
+                        return columnValue;
+                    }
+                    System.out.println("");
+                }
+                con.close();
+            }
+            catch (SQLException err){
+                System.out.println(err.getMessage());
+            }
+            return "";
         }
     }
+
 }

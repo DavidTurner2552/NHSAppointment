@@ -24,7 +24,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/splash_text"
-        android:text="Help page"
+        android:text="FAQs"
         android:gravity="center"
         android:textSize="24sp"
         android:textColor="@color/textWhite"
@@ -48,5 +48,84 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/splash_text"
+        android:layout_centerHorizontal="true"
+        android:text="@string/help_text"
+        android:textColor="@color/textWhite"
+        android:id="@+id/textView" />
+
+    <Button
+        android:id="@+id/question_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="19dp"
+        android:layout_toStartOf="@+id/splash_text"
+        android:background="@color/backgroundBlue"
+        android:text="@string/question_1"
+        android:textColor="@color/textWhite" />
+
+    <Button
+        android:id="@+id/question_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/question_1"
+        android:layout_alignStart="@+id/question_1"
+        android:layout_below="@+id/question_1"
+        android:layout_marginTop="11dp"
+        android:background="@color/backgroundBlue"
+        android:text="@string/question_2"
+        android:textColor="@color/textWhite" />
+
+    <Button
+        android:id="@+id/question_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/question_2"
+        android:layout_alignStart="@+id/question_2"
+        android:layout_below="@+id/question_2"
+        android:layout_marginTop="13dp"
+        android:background="@color/backgroundBlue"
+        android:text="@string/question_3"
+        android:textColor="@color/textWhite" />
+
+    <Button
+        android:id="@+id/question_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/question_3"
+        android:layout_alignStart="@+id/question_3"
+        android:layout_below="@+id/question_3"
+        android:layout_marginTop="14dp"
+        android:background="@color/backgroundBlue"
+        android:text="@string/question_4"
+        android:textColor="@color/textWhite" />
+
+    <Button
+        android:id="@+id/question_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/question_4"
+        android:layout_alignStart="@+id/question_4"
+        android:layout_below="@+id/question_4"
+        android:layout_marginTop="13dp"
+        android:background="@color/backgroundBlue"
+        android:text="@string/question_5"
+        android:textColor="@color/textWhite" />
+
+    <TextView
+        android:id="@+id/answer"
+        android:layout_width="180sp"
+        android:layout_height="280sp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/question_1"
+        android:layout_marginEnd="18dp"
+        android:layout_marginTop="32dp"
+        android:text="Sample Text"
+        android:textColor="@color/textWhite"/>
 
 </RelativeLayout>

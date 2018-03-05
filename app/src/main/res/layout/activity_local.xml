@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:id="@+id/local_page"
     android:background="@color/backgroundBlue"
-    tools:context="com.example.david.appointmentapplication.LocalActivity">
+    tools:context="com.example.david.nhsappointment.LocalActivity">
 
     <TextView
         android:layout_width="180dp"

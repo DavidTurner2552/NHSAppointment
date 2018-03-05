@@ -9,4 +9,5 @@
     <string name="home_button">Home</string>
     <string name="profile_button">Profile</string>
     <string name="title_activity_book">BookActivity</string>
+    <string name="title_activity_login">Sign in</string>
 </resources>

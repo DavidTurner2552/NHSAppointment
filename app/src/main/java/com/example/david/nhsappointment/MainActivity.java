@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private ImageButton local_button;
     private ImageButton symptoms_button;
     private ImageButton help_button;
+    private ImageButton profile_button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +35,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         symptoms_button.setOnClickListener(this);
         help_button = (ImageButton) findViewById(R.id.help_button);
         help_button.setOnClickListener(this);
+        profile_button = (ImageButton) findViewById(R.id.profile_button);
+        profile_button.setOnClickListener(this);
     }
 
     public void onClick(View v){
@@ -63,6 +66,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         else if (v.getId() == R.id.help_button){
             Intent i = new Intent(this, HelpActivity.class);
+            startActivity(i);
+        }
+        else if (v.getId() == R.id.profile_button){
+            Intent i = new Intent(this, LoginActivity.class);
             startActivity(i);
         }
     }

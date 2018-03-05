@@ -78,6 +78,7 @@
         android:layout_height="40dp"
         android:layout_alignStart="@+id/cusUsername"
         android:layout_below="@+id/defUsername"
+        android:inputType="textPassword"
         android:textColor="@color/textWhite"
         android:textSize="24sp" />
 

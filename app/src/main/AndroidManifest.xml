@@ -32,7 +32,8 @@
         <activity android:name=".SymptomsActivity" />
         <activity android:name=".HelpActivity" />
         <activity android:name=".LoginActivity" />
-        <activity android:name=".UserActivity"></activity>
+        <activity android:name=".UserActivity" />
+        <activity android:name=".ProfilePage"></activity>
     </application>
 
 </manifest>

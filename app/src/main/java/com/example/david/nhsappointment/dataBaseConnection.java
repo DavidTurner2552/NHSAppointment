@@ -6,8 +6,17 @@ package com.example.david.nhsappointment;
 
     public abstract class dataBaseConnection {
 
-        public static String loginQuery(int password)
+        public static boolean loginQuery(String email, String password)
         {
-            return "";
+            if (email.equals(Variables.login[0]) && password.equals(Variables.login[1]))
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public static String[] profileQuery()
+        {
+            return Variables.profile;
         }
     }

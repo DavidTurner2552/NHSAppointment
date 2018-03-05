@@ -81,6 +81,7 @@
         android:layout_alignStart="@+id/splash_text"
         android:layout_alignTop="@+id/defPassword"
         android:layout_marginEnd="17dp"
+        android:inputType="textPassword"
         android:textColor="@color/textWhite"
         android:textSize="24sp" />
 

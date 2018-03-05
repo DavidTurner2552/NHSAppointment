@@ -18,6 +18,7 @@ public class SymptomsActivity extends AppCompatActivity implements View.OnClickL
         home_button.setOnClickListener(this);
     }
 
+    // https://patient.info/symptom-checker
     public void onClick(View v) {
         if (v.getId() == R.id.home_button) {
             Intent i = new Intent(this, MainActivity.class);

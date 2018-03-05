@@ -1,10 +1,14 @@
 package com.example.david.nhsappointment;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.EditText;
+import android.view.View;
+import android.widget.ImageButton;
+import android.widget.TextView;
 
-public class ProfilePage extends AppCompatActivity {
+public class ProfilePage extends AppCompatActivity implements View.OnClickListener {
+    private ImageButton home_button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -13,17 +17,26 @@ public class ProfilePage extends AppCompatActivity {
 
         String[] profile = dataBaseConnection.profileQuery();
 
-        EditText name = (EditText) findViewById(R.id.name);
+        TextView name = (TextView) findViewById(R.id.name);
         name.setText("Name: " + profile[0]);
-        EditText dob = (EditText) findViewById(R.id.dob);
+        TextView dob = (TextView) findViewById(R.id.dob);
         dob.setText("DoB: " + profile[1]);
-        EditText address = (EditText) findViewById(R.id.address);
+        TextView address = (TextView) findViewById(R.id.address);
         address.setText("Address: " + profile[2]);
-        EditText doctor = (EditText) findViewById(R.id.doctor);
+        TextView doctor = (TextView) findViewById(R.id.doctor);
         doctor.setText("Doctor: " + profile[3]);
-        EditText telephone = (EditText) findViewById(R.id.telephone);
+        TextView telephone = (TextView) findViewById(R.id.telephone);
         telephone.setText("Telephone: " + profile[4]);
-        EditText email = (EditText) findViewById(R.id.email);
+        TextView email = (TextView) findViewById(R.id.email);
         email.setText("Email: " + profile[5]);
+        home_button = (ImageButton) findViewById(R.id.home_button);
+        home_button.setOnClickListener(this);
+    }
+
+    public void onClick(View v) {
+        if (v.getId() == R.id.home_button) {
+            Intent i = new Intent(this, MainActivity.class);
+            startActivity(i);
+        }
     }
 }

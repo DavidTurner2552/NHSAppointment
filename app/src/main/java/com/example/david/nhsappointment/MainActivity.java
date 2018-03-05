@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             startActivity(i);
         }
         else if (v.getId() == R.id.profile_button){
-            Intent i = new Intent(this, LoginActivity.class);
+            Intent i = new Intent(this, ProfilePage.class);
             startActivity(i);
         }
     }

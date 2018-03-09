@@ -49,4 +49,25 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
+    <EditText
+        android:id="@+id/symptoms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/splash_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Enter your symptoms here"
+        android:inputType="text|textPersonName"
+        android:textColor="@color/textWhite" />
+
+    <Button
+        android:id="@+id/search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/symptoms"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="28dp"
+        android:text="Search" />
+
 </RelativeLayout>

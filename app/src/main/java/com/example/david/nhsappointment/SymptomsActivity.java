@@ -7,7 +7,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.view.View.OnFocusChangeListener;
 import android.net.Uri;
 
 public class SymptomsActivity extends AppCompatActivity implements View.OnClickListener {

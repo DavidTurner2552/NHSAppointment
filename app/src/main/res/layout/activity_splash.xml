@@ -8,19 +8,6 @@
     android:background="@color/backgroundBlue"
     tools:context="com.example.david.nhsappointment.SplashActivity">
 
-    <TextView
-        android:layout_width="180dp"
-        android:layout_height="138dp"
-        android:id="@+id/add_image"
-        android:text="NHS logo"
-        android:textSize="48sp"
-        android:gravity="center"
-        android:textColor="@color/textWhite"
-        tools:layout_editor_absoluteY="128dp"
-        tools:layout_editor_absoluteX="102dp"
-        android:layout_marginBottom="53dp"
-        android:layout_above="@+id/splash_text"
-        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -37,5 +24,14 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginBottom="178dp" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="130sp"
+        android:layout_height="130sp"
+        android:layout_above="@+id/splash_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="66dp"
+        android:src="@drawable/nhslogo" />
 
 </RelativeLayout>

@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             startActivity(i);
         }
         else if (v.getId() == R.id.local_button){
-            Intent i = new Intent(this, LocalActivity.class);
+            Intent i = new Intent(this, MapsActivity.class);
             startActivity(i);
         }
         else if (v.getId() == R.id.symptoms_button){

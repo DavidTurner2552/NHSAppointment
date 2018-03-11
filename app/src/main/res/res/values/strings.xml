@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">AppointmentApplication</string>
+    <string name="book_button">Book Appointment</string>
+    <string name="cancel_button">Cancel Appointment</string>
+    <string name="change_button">Change Appointment</string>
+    <string name="local_button">Local Surgeries</string>
+    <string name="diag_button">Self Diagnose</string>
+    <string name="help_button">Help</string>
+    <string name="home_button">Home</string>
+    <string name="profile_button">Profile</string>
+    <string name="title_activity_book">BookActivity</string>
+    <string name="title_activity_login">Sign in</string>
+    <string name="question_1">How do i log in?</string>
+    <string name="answer_1"> You can log in by clicking on the profile button in the top right. Then use your email and D.o.B.</string>
+    <string name="question_2">How do i book an appointment?</string>
+    <string name="answer_2">By navigating to the "book appointment" page, then simply selecting an available date/time and selecting book.</string>
+    <string name="question_3">Is it possible to re-arrange an appointment?</string>
+    <string name="answer_3">Yes. You can alter an appointment using the "change appointment" page.</string>
+    <string name="question_4">Am i able to alter my details on the application.</string>
+    <string name="answer_4">Not right now. In these early stages the only way to alter your details would be to call your surgery.</string>
+    <string name="question_5">Can i quickly diagnose my own symptoms?</string>
+    <string name="answer_5">You could use the symptom checker page to get an idea for your current illness. Be wary, though, as these may not always be so accurate.</string>
+    <string name="help_text">Click on a question to reveal its answer.</string>
+    <string name="title_activity_maps">Map</string>
+</resources>

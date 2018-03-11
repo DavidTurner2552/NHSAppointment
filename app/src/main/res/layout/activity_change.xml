@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,6 +7,10 @@
     android:id="@+id/change_page"
     android:background="@color/backgroundBlue"
     tools:context="com.example.david.nhsappointment.ChangeActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
     <ImageView
         android:id="@+id/logo"
@@ -48,4 +52,53 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
+    <TextView
+        android:id="@+id/instruction_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/title_text"
+        android:text="Select and appointment to cancel then one to book and push the change button."
+        android:textColor="@color/textWhite" />
+
+    <ListView
+        android:id="@+id/cancel_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/title_text"
+        android:layout_marginTop="34dp"></ListView>/>
+
+        <CalendarView
+            android:id="@+id/calenderA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:layout_below="@id/cancel_list"
+            android:theme="@style/CalenderViewCustom"
+            android:dateTextAppearance="@style/CalenderViewDateCustomText"
+            android:weekDayTextAppearance="@style/CalenderViewWeekCustomText">
+
+        </CalendarView>
+
+        <ListView
+            android:id="@+id/listofTimes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/calenderA"
+            android:layout_marginTop="34dp">
+
+        </ListView>/>
+
+        <Button
+            android:id="@+id/change_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/listofTimes"
+            android:text="Change Appointment"
+            />
+
 </RelativeLayout>
+
+</ScrollView>
